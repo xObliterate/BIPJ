@@ -7,13 +7,14 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'notification',
-    loadChildren: () => import('./notification/notification.module').then( m => m.NotificationPageModule)
+    path: 'login',
+    loadChildren: () => import('./modals/login/login.module').then(m => m.LoginPageModule)
   },
   {
-    path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
-  },
+    path: 'index',
+    loadChildren: () => import('./index/index.module').then(m => m.IndexPageModule)
+  }
+
 ];
 @NgModule({
   imports: [
@@ -21,4 +22,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
